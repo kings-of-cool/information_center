@@ -6,6 +6,7 @@ Bundler.require(*Rails.groups)
 module InformationCenter
   class Application < Rails::Application
     config.load_defaults 6.0
+    config.time_zone = 'Tokyo'
     config.generators do |g|
       # rails g 時にassetとhelperを自動生成しない
       g.assets false
