@@ -7,6 +7,10 @@ module InformationCenter
   class Application < Rails::Application
     config.load_defaults 6.0
     config.generators do |g|
+      # rails g 時にassetとhelperを自動生成しない
+      g.assets false
+      g.helper false
+
       g.test_framework :rspec,
                         fixtures: true,
                         view_specs: false,
