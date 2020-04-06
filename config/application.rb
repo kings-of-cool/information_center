@@ -3,7 +3,7 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
-module InformationCenter
+module KottiKotti
   class Application < Rails::Application
     config.load_defaults 6.0
     config.i18n.default_locale = :ja
