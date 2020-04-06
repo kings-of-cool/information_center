@@ -1,0 +1,2 @@
+class InformationCenter < ApplicationRecord
+end
