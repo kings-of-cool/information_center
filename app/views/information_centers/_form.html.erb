@@ -1,0 +1,18 @@
+<% if information_center.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= information_center.errors.count%> つのエラーがあります。</h2>
+    <ul>
+      <% information_center.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: information_center, local: true) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :tel %>
+  <%= f.telephone_field :tel %>
+  <%= f.submit %>
+<% end %>

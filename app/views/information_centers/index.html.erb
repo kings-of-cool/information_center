@@ -1,5 +1,6 @@
 <% if @information_center.new_record? %>
   <p>InformationCenterを作成してください。</p>
+  <%= link_to "作成", new_information_center_path %>
 <% else %>
   <p>作成されているとここにもろもろ表示</p>
 <% end %>
