@@ -2,6 +2,7 @@ class InformationCentersController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    # InformationCenterは唯一のためid: 1を指定
     @information_center = InformationCenter.find_or_initialize_by(id: 1)
   end
 
