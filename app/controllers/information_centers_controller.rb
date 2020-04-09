@@ -3,7 +3,10 @@ class InformationCentersController < ApplicationController
 
   def index
     # InformationCenterは唯一のためid: 1を指定
-    @information_center = InformationCenter.find_or_initialize_by(id: 1)
+    # @information_center = InformationCenter.find_or_initialize_by(id: 1)
+
+    # これは開発用。開発するとid: 1じゃないやつもできるから
+    @information_center = InformationCenter.first || InformationCenter.new
   end
 
   def new
