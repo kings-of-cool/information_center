@@ -1,0 +1,7 @@
+<% if @information_center.new_record? %>
+  <p>InformationCenterを作成してください。</p>
+  <%= link_to "作成", new_information_center_path %>
+<% else %>
+  <p><%= @information_center.name %></p>
+  <p><%= @information_center.tel %></p>
+<% end %>
